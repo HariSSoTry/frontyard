@@ -1,5 +1,7 @@
 <template>
-<div>Rabotaem</div>
+  <div>
+    <h1>Логин</h1>
+  </div>
 </template>
 
 <script>

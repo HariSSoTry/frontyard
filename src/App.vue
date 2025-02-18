@@ -1,7 +1,8 @@
 <template>
-  <div className="container">
+  <div id="app" className="container">
     <Menu />
-    <Profile />
+    <router-view></router-view>
+    <!-- <Profile /> -->
   </div>
 </template>
 
@@ -9,11 +10,21 @@
 
 import Menu from './components/Menu.vue';
 import Profile from './components/Profile/Profile.vue';
+import Championship from './components/Championship/Championship.vue';
+import Games from './components/Games/Games.vue';
+import News from './components/News/News.vue';
+import Statistics from './components/Statistics/Statistics.vue';
 
 export default {
+  name: 'App',
+
   components: {
     Menu,
-    Profile
+    Profile,
+    Championship,
+    Games,
+    News,
+    Statistics
   }
 }
 </script>
