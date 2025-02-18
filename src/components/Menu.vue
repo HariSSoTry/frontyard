@@ -1,46 +1,42 @@
 <template>
-  <div className="buttons-container">
-    <div class="footer-buttons">
-      <button>Чемпионат</button>
-      <button>Игры</button>
-      <button>Статистика</button>
-      <button>Новости</button>
-      <button>Профиль</button>
-    </div>
+  <div class="buttons-container">
+    <nav class="button-container">
+      <router-link to="/championship" class="footer-button">Чемпионат</router-link>
+      <router-link to="/games" class="footer-button">Игры</router-link>
+      <router-link to="/statistics" class="footer-button">Статистика</router-link>
+      <router-link to="/" class="footer-button">Новости</router-link>
+      <router-link to="/profile" class="footer-button">Профиль</router-link>
+    </nav>
   </div>
-  </template>
-  
-  <script>
+</template>
+
+<script>
   export default {
-    methods: {
-      
-    }
-  }
-  </script>
-  
-  <style>
-  .buttons-container {
-    display: flex; /* Используем flexbox для размещения кнопок */
-    justify-content: space-around; /* Распределяем кнопки равномерно */
-    padding: 20px; /* Отступы вокруг кнопок */
-    background-color: #fff; /* Цвет фона контейнера кнопок */
-    border-top: 2px solid #ccc; /* Граница сверху для отделения от содержимого */
-  }
-  .footer-buttons {
-    padding: 10px 20px; /* Внутренние отступы для кнопок */
-    font-size: 16px; /* Размер шрифта */
-    color: #fff; /* Цвет текста */
-    background-color: #007bff; /* Цвет фона кнопок */
-    border: none; /* Убираем стандартную границу */
-    border-radius: 5px; /* Закругленные углы */
-    cursor: pointer; /* Указатель при наведении */
-    transition: background-color 0.3s; /* Плавный переход цвета фона */
-  }
-  .footer-buttons button {
-    cursor: pointer;
-    padding: 1em 3em; /* Размер кнопок */
-  }
-  .footer-buttons button:hover {
-    background-color: #ffffff;
-  }
-  </style>  
+    name: 'Menu',
+  };
+</script>
+
+<style>
+.buttons-container {
+  position: fixed;
+  bottom: 0; /* Размещаем контейнер кнопок внизу */
+  left: 0; /* Начинаем от левого края */
+  right: 0; /* Заканчиваем у правого края */
+  display: flex; /* Используем flexbox для размещения кнопок */
+  justify-content: space-around; /* Распределяем кнопки равномерно */
+}
+
+.footer-button {
+  flex: 1;
+  display: inline-block; /* Позволяет элементам вести себя как блочные элементы */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  background-color: #ffffff; /* Цвет фона кнопки */
+  color: rgb(0, 0, 0); /* Цвет текста */
+  text-align: center; /* Выравнивание текста по центру */
+  text-decoration: none; /* Убирает подчеркивание */
+}
+
+.footer-button:hover {
+  background-color: rgb(196, 146, 146); /* Цвет фона при наведении */
+}
+</style>
