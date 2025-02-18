@@ -1,0 +1,7 @@
+body {
+    background: white;
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрируем контент по горизонтали */
+    align-items: center; /* Центрируем контент по вертикали */
+    height: 100vh; /* Высота контейнера на весь экран */
+}
